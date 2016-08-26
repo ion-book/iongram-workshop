@@ -1,0 +1,61 @@
+<ion-view view-title="profile">
+  <ion-content class="profile">
+    <!-- Avatar -->
+    <div class="row">
+      <div class="col col-33">
+        <img src="img/Usuario.jpg" alt="Usuario" class="full-image img-profile">
+      </div>
+      <div class="col col-67">
+        <div class="row">
+          <div class="col col-33 text-center">
+            118 </br>
+            <small>Post</small>
+          </div>
+          <div class="col col-33 text-center">
+            123 </br>
+            <small>Followers</small>
+          </div>
+          <div class="col col-33 text-center">
+            213 </br>
+            <small>Following</small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="button button-profile button-small button-block">
+              Editar perfil
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Text -->
+    <div class="row">
+      <div class="col">
+        <h5>Nicola Molina</h5>
+        <p>Desarrollador de sofware y ansioso por viajar.</p>
+      </div>
+    </div>
+    <!-- Buttons -->
+    <div class="button-bar">
+      <button ng-click="changeMode(true)" class="button button-dark button-clear ion-grid"></button>
+      <button ng-click="changeMode(false)" class="button button-dark button-clear ion-ios-list"></button>
+      <button ng-click="goToMapPage()" class="button button-dark button-clear ion-ios-location"></button>
+      <button class="button button-dark button-clear icon ion-bookmark"></button>
+    </div>
+    <!-- Gallery -->
+    <div class="row row-wrap">
+      <div class="col" ng-repeat="photo in photos" 
+      ng-class="{
+        'col-offset-10 col-80': !mode.grid,
+        'col-33': mode.grid
+      }">
+        <div ng-class="{
+          'thumbnail': mode.grid
+        }">
+          <img ng-src="{{ photo.img }}" class="full-image" alt="img">
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

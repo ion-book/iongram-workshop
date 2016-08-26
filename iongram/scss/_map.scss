@@ -1,0 +1,11 @@
+.map{
+  .scroll{
+    height: 100%;
+  }
+  .button-map{
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    z-index: 2;
+  }
+}

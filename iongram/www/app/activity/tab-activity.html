@@ -1,0 +1,22 @@
+<ion-view view-title="Actividad">
+  <ion-content class="activity">
+    <ion-list>
+      <ion-item class="item-avatar item-button-right" ng-repeat="activity in items">
+        <img ng-src="{{ activity.user.avatar }}" alt="adam">
+        <p><strong>{{ activity.user.username }}</strong> {{ activity.activity }}</p>
+        <button class="button" ng-click="followUser( activity )" 
+        ng-class="{
+          'button-balanced': activity.user.follow,
+          'button-positive': !activity.user.follow,
+          'button-outline': !activity.user.follow,
+        }">
+          <i class="icon" 
+          ng-class="{
+            'ion-checkmark': activity.user.follow,
+            'ion-person-add': !activity.user.follow
+          }"></i>
+        </button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

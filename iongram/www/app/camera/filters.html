@@ -1,0 +1,44 @@
+<ion-view view-title="Filtros">
+  <ion-nav-buttons side="right">
+    <a href="#/tab/home" class="button button-clear button-dark">Siguiente</a>
+  </ion-nav-buttons>
+  <ion-content class="filters">
+    <div class="photo">
+      <img ng-src="{{ cover.img }}" alt="img" class="full-image {{ cover.filter }}">
+    </div>
+    <ion-scroll zooming="false" direction="x" class="scroll-filters">
+      <div class="row">
+        <div class="col col-40">
+          <p class="text-center">Normal</p>
+          <div class="filter" ng-click="applyFilter( '' )">
+            <img ng-src="{{ cover.img }}" alt="img" class="full-image">
+          </div>
+        </div>
+        <div class="col col-40">
+          <p class="text-center">Grayscale</p>
+          <div class="filter" ng-click="applyFilter( 'grayscale' )">
+            <img ng-src="{{ cover.img }}" alt="img" class="full-image grayscale">
+          </div>
+        </div>
+        <div class="col col-40">
+          <p class="text-center">Sepia</p>
+          <div class="filter" ng-click="applyFilter( 'sepia' )">
+            <img ng-src="{{ cover.img }}" alt="img" class="full-image sepia">
+          </div>
+        </div>
+        <div class="col col-40">
+          <p class="text-center">Sature</p>
+          <div class="filter" ng-click="applyFilter( 'sature' )">
+            <img ng-src="{{ cover.img }}" alt="img" class="full-image sature">
+          </div>
+        </div>
+        <div class="col col-40">
+          <p class="text-center">Hue-rotate</p>
+          <div class="filter" ng-click="applyFilter( 'hue-rotate' )">
+            <img ng-src="{{ cover.img }}" alt="img" class="full-image hue-rotate">
+          </div>
+        </div>
+      </div>
+    </ion-scroll>
+  </ion-content>
+</ion-view>

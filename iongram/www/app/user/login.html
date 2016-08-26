@@ -1,0 +1,43 @@
+<ion-view hide-nav-bar="true" class="login">
+  <ion-content>
+    <div class="row">
+      <div class="col col-60 col-offset-20">
+        <img src="img/logo.instagram.png" alt="logo" class="full-image">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <form name="FormLogin" ng-submit="doLogin()">
+          <ion-list type="list-inset">
+            <label class="item item-input">
+              <input type="text" placeholder="Usuario" ng-model="user.username" required>
+            </label>
+            <label class="item item-input">
+              <input type="password" placeholder="Contraseña" ng-model="user.password" required>
+            </label>
+          </ion-list>
+          <div class="padding">
+            <button type="submit" ng-disabled="FormLogin.$invalid" class="button button-outline button-block button-light">
+              Ingresar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="text-center">¿Olvidaste tu contraseña?</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a href="#/tab/home" class="text-center">
+          <p><i class="icon ion-social-facebook"></i> Ingrese con facebook</p>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+  <div class="bar bar-footer">
+    <div class="title">Registrese</div>
+  </div>
+</ion-view>

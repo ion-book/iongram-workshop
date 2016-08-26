@@ -1,0 +1,25 @@
+<ion-view view-title="Comments">
+  <ion-nav-buttons side="left">
+    <button ng-click="$ionicGoBack()"
+      class="button back-button buttons button-clear header-item">
+      <i class="icon ion-android-arrow-back"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-avatar" ng-repeat="item in comments">
+        <img ng-src="{{ item.user.avatar }}" alt="avatar">
+        <h2>{{ item.user.username }}</h2>
+        <p>{{ item.comment }}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar keyboard-attach class="item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="Agrega tu comentario" ng-model="newComment.comment">
+    </label>
+    <button class="button button-dark button-clear" ng-disabled="!newComment.comment" ng-click="sendComment()">
+      Enviar
+    </button>
+  </ion-footer-bar>
+</ion-view>

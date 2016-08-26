@@ -1,0 +1,32 @@
+<ion-view view-title="Fotos">
+  <ion-nav-buttons side="left">
+    <button ng-click="$ionicGoBack()"
+      class="button back-button buttons button-clear header-item">
+      <i class="icon ion-android-arrow-back"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button ng-click="goToFilters()" class="button button-clear button-dark">
+      Siguiente
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="camera">
+    <div class="photo">
+      <img ng-src="{{ photoSelected.img }}" alt="img" class="full-image">
+    </div>
+    <div class="row row-wrap">
+      <div class="col col-33" ng-repeat="photo in photos">
+        <div class="thumbnail" ng-click="changePhoto( photo )">
+          <img ng-src="{{ photo.img }}" class="full-image" alt="img">
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar>
+    <div class="button-bar">
+      <button ng-click="takePicture()" class="button icon-left ion-camera">
+        Tomar Foto
+      </button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

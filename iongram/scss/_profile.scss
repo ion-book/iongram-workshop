@@ -1,0 +1,29 @@
+.profile{
+  .button-profile{
+    margin: 0px;
+  }
+  .img-profile{
+    border-radius: 50%;
+  }
+  .thumbnail{
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+    img{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  }
+  .row-wrap .col{
+    padding: 1px;
+  }
+  h5{
+    margin: 0px;
+    font-weight: bold;
+  }
+  p{
+    margin: 0px;
+  }
+}

@@ -1,0 +1,17 @@
+.photo{
+  h2{
+    font-weight: bold;
+  }
+  .item-avatar{
+    min-height: auto;
+    padding-left: 56px;
+    img:first-child{
+      max-width: 30px;
+      max-height: 30px;
+      top: 10px;
+    }
+  }
+  .buttons{
+    padding: 0px;
+  }
+}

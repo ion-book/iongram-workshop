@@ -5,29 +5,49 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
-    -->
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/services.js"></script>
+    <script src="app/app.modules.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/app.run.js"></script>
+    <!-- Modules -->
+    <script src="app/activity/activity.module.js"></script>
+    <script src="app/camera/camera.module.js"></script>
+    <script src="app/home/home.module.js"></script>
+    <script src="app/map/map.module.js"></script>
+    <script src="app/search/search.module.js"></script>
+    <script src="app/tabs/tabs.module.js"></script>
+    <script src="app/user/user.module.js"></script>
+    <script src="app/widgets/widgets.module.js"></script>
+    <!-- Widgets -->
+    <script src="app/widgets/map.directive.js"></script>
+    <!-- Controllers -->
+    <script src="app/activity/tab-activity.controller.js"></script>
+    <script src="app/camera/camera.controller.js"></script>
+    <script src="app/camera/filters.controller.js"></script>
+    <script src="app/home/tab-home.controller.js"></script>
+    <script src="app/home/comments.controller.js"></script>
+    <script src="app/map/map.controller.js"></script>
+    <script src="app/search/tab-search.controller.js"></script>
+    <script src="app/user/login.controller.js"></script>
+    <script src="app/user/tab-profile.controller.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="app">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
-    <ion-nav-bar class="bar-stable">
+    <ion-nav-bar class="bar-stable" align-title="center">
       <ion-nav-back-button>
       </ion-nav-back-button>
     </ion-nav-bar>
