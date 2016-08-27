@@ -49,7 +49,6 @@
         }
       }
     })
-    /*
     .state('tab.profile', {
       url: '/profile',
       views: {
@@ -64,22 +63,24 @@
       templateUrl: 'app/map/map.html',
       controller: 'MapCtrl'
     })
+    
     .state('camera', {
       url: '/camera',
       templateUrl: 'app/camera/camera.html',
       controller: 'CameraCtrl'
     })
+    
     .state('filters', {
       url: '/filters/:img',
       templateUrl: 'app/camera/filters.html',
       controller: 'FiltersCtrl'
     })
+  
     .state('comments', {
       url: '/comments/:id',
       templateUrl: 'app/home/comments.html',
       controller: 'CommentsCtrl'
     })
-    */
 
   }
 })();
